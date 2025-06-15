@@ -16,3 +16,15 @@ public class Exercise06_31 {
         int sum = sumOfDoubleEvenPlace(number) + sumOfOddPlace(number);
         return sum % 10 == 0;
     }
+    
+     /** Get the result from step 2: double every second digit, sum digits */
+    public static int sumOfDoubleEvenPlace(long number) {
+        int sum = 0;
+        String s = Long.toString(number);
+        // start from second-to-last digit
+        for (int i = s.length() - 2; i >= 0; i -= 2) {
+            int d = Character.getNumericValue(s.charAt(i));
+            sum += getDigit(d * 2);
+        }
+        return sum;
+    }
