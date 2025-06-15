@@ -34,3 +34,14 @@ public class Exercise06_31 {
         if (number < 10) return number;
         return (number / 10) + (number % 10);
     }
+
+     /** Sum the digits in the odd places from right to left */
+    public static int sumOfOddPlace(long number) {
+        int sum = 0;
+        String s = Long.toString(number);
+        // start from last digit
+        for (int i = s.length() - 1; i >= 0; i -= 2) {
+            sum += Character.getNumericValue(s.charAt(i));
+        }
+        return sum;
+    }
