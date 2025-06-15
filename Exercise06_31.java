@@ -55,3 +55,29 @@ public class Exercise06_31 {
     public static int getSize(long d) {
         return Long.toString(d).length();
     }
+
+       /**
+     * Return the first k number of digits from number. 
+     * If the number of digits in number is less than k, return number.
+     */
+    public static long getPrefix(long number, int k) {
+        String s = Long.toString(number);
+        if (s.length() <= k) {
+            return number;
+        }
+        return Long.parseLong(s.substring(0, k));
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter a credit card number as a long integer: ");
+        long cardNumber = in.nextLong();
+        in.close();
+
+        if (isValid(cardNumber)) {
+            System.out.println(cardNumber + " is valid");
+        } else {
+            System.out.println(cardNumber + " is invalid");
+        }
+    }
+}
