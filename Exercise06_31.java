@@ -1,3 +1,4 @@
+import java.util.Scanner; 
 public class Exercise06_31 {
 
     /** Return true if the card number is valid */
