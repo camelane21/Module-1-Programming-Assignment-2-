@@ -45,3 +45,13 @@ public class Exercise06_31 {
         }
         return sum;
     }
+
+     /** Return true if the number d is a prefix for number */
+    public static boolean prefixMatched(long number, int d) {
+        return getPrefix(number, getSize(d)) == d;
+    }
+
+    /** Return the number of digits in d */
+    public static int getSize(long d) {
+        return Long.toString(d).length();
+    }
