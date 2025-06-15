@@ -1,5 +1,5 @@
 import java.util.Scanner; 
-public class Exercise06_31 {
+public class Main {
 
     /** Return true if the card number is valid */
     public static boolean isValid(long number) {
