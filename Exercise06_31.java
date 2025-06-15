@@ -16,7 +16,7 @@ public class Exercise06_31 {
         int sum = sumOfDoubleEvenPlace(number) + sumOfOddPlace(number);
         return sum % 10 == 0;
     }
-    
+
      /** Get the result from step 2: double every second digit, sum digits */
     public static int sumOfDoubleEvenPlace(long number) {
         int sum = 0;
@@ -27,4 +27,10 @@ public class Exercise06_31 {
             sum += getDigit(d * 2);
         }
         return sum;
+    }
+
+     /** Return this number if single digit, otherwise sum the two digits */
+    public static int getDigit(int number) {
+        if (number < 10) return number;
+        return (number / 10) + (number % 10);
     }
